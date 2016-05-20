@@ -31,7 +31,6 @@ int main(void){
 	contador=0;
 	pthread_create(&hprod, &atrib, func_prod, NULL);
 	pthread_create(&hcons, &atrib, func_cons, NULL);
-	// int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg)
 	pthread_join(hprod, NULL);
 	pthread_join(hcons, NULL);
 
